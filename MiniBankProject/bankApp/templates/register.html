@@ -1,0 +1,15 @@
+{%extends "parent.html"%}
+{%block title%}Mini Bank{%endblock%}
+{%block content%}
+<form action="add/" class="box" method="GET">
+    {% csrf_token %}
+    <h1>Registration Form</h1>
+        <label for="username">User Name:</label>
+        <input type="text" name="name" id="username">
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="password">
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" id="amount">
+        <input type="submit" value="Submit">
+</form>
+{%endblock%}
